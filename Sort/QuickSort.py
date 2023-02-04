@@ -1,5 +1,5 @@
-#재귀적 방식
-#피벗
+#퀵정렬
+#피벗 + 재귀적 방식
 array= [7,5,9,0,3,1,6,12]
 
 def quick_sort(array, start, end):
