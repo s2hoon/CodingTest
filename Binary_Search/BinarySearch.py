@@ -15,8 +15,9 @@
 def binary_search(array, target, start, end):
     if start> end:
         return None
-    mid = (start + end) //2
 
+
+    mid = (start + end) //2
     if array[mid] == target:
         return mid
     
