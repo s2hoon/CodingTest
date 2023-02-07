@@ -25,7 +25,7 @@ def quick_sort(array, start, end):
 def quick_sort2(array):
     if len(array)<=1:
         return array
-    pivot = array
+    pivot = array[0]
     tail = array[1:]
 
     left_side = [x for x in tail if x<=pivot]

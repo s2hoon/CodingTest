@@ -1,5 +1,6 @@
-array= [7,5,9,0,3,1,6,12]
+#계수 정렬
 
+array= [7,5,9,0,3,1,6,12]
 count = [0] * (max(array)+1)
 
 for i in range(len(array)):
