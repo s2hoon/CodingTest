@@ -8,11 +8,12 @@ def BackTracking(answer,visited):
        
 
     for i in range(1, N+1):
-        if visited[i] ==False:
-            visited[i] =True
-            answer.append(i)
-            BackTracking(answer, visited)
-            answer.pop()
-            visited[i] =False
+        if visited[i] ==True:
+            continue
+        visited[i] =True
+        answer.append(i)
+        BackTracking(answer, visited)
+        answer.pop()
+        visited[i] =False
 
 BackTracking(answer,visited)
