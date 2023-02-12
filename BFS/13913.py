@@ -1,8 +1,21 @@
+#string[start:end:step] 
 from collections import deque
 
 N ,K = map(int, input().split())
 visited = [0 for i in range(100002)]
 node = [0 for i in range(100002)]
+
+def move(v):
+    data = []
+    temp = v
+
+    for i in range(visited[v]+1):
+        data.append(temp)
+        temp = node[temp]
+    
+    print(' '.join(map(str,data[::-1])))
+
+
 def BFS(start):
 
     queue =deque()
@@ -25,7 +38,7 @@ def BFS(start):
                 visited[nextv] = visited[v] +1
                 #큐에 추가
                 queue.append(nextv)
+                node[nextv] = v
 
 print(BFS(N))
-
-
+move(K)
