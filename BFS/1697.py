@@ -2,7 +2,8 @@ from collections import deque
 
 N ,K = map(int, input().split())
 visited = [0 for i in range(100002)]
-node = [0 for i in range(100002)]
+
+
 def BFS(start):
 
     queue =deque()

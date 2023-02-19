@@ -11,6 +11,7 @@ for i in range(T):
         dp[2] =2
 
     if n >=3 :
+        
         dp[3] = 4
     if n>=4:
         for i in range( 4, n+1):
