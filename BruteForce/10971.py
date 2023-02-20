@@ -6,17 +6,20 @@ for i in range(N):
 
 temp = []
 result = []
-visited = [[False for i in range(N)] for i in range(N)]
+visited = [False for i in range(N)]
 
 print(W)
 
-def BackTrack(start,W):
+def BackTrack(start,next):
 
     if len(temp) == N:
         print()
         return
 
     for i in range(N): #10
-        for j in range(N): #10
-            if visited[i][j] ==False:
+        if visited[i]==False and W[start][next]!=0:
+            visited[i]=True
+            temp.append(W[start][i])
+            BackTrack(start, next)
+
 
