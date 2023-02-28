@@ -1,8 +1,9 @@
+#two pointer
 N = int(input())
 
 num = list(map(int, input().split()))
 num.sort()
-print(num)
+#print(num)
 start_index =0
 end_index = N-1
 
