@@ -12,12 +12,12 @@ def DFS():
         print(' '.join(map(str,result)))
         return
 
-    #overlap = 0
+    overlap = 0
     for i in range(1,N+1):
-         if visited[i] ==False :
+         if visited[i] ==False and overlap !=num[i]:
             visited[i] =True
             result.append(num[i])
-         
+            overlap = num[i]
             DFS()
             result.pop()
             visited[i] =False

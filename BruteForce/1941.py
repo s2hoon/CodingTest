@@ -47,7 +47,7 @@ def checkS(comb):
         if arr[a][b] =='S':
             count +=1
     
-    if count == 4:
+    if count >= 4:
         return True
     else:
         return False

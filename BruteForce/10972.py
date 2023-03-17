@@ -12,4 +12,7 @@ for i in range(N-1,0,-1):
                 exit()
 
 print(-1)
-         
+        
+
+#13542
+#12534
