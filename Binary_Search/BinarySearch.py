@@ -31,8 +31,8 @@ def binary_search(array, target, start, end):
 
 
 #반복문 
-def binary_search2(array, target, start, end):
-    while start<= end:
+def binary_search2(array, target, start, end): #log(N)
+    while start<= end:  
         mid = (start +end) // 2
         
         if array[mid] == target:

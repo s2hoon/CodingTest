@@ -1,7 +1,7 @@
 
 num = list( map(int,input().split()))
 
-print(num)
+#print(num)
 
 sum = 0
 for item in num:
