@@ -7,7 +7,6 @@ dp[0] = num[0]
 for i in range(1, N):
     dp[i] = dp[i-1]+ num[i]
 
-print(dp)
 result = 0
 # 벌통이 왼쪽
 for i in range(1,N-1): 

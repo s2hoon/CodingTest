@@ -2,6 +2,7 @@ import sys
 
 N = int(sys.stdin.readline().strip())
 homework = list(sys.stdin.readline().strip())
+
 dic ={'B': 0,'R':0}
 dic[homework[0]] +=1
 for i in range(1, len(homework)):
