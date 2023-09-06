@@ -30,13 +30,14 @@ def moving(windows,t):
         return
     temp = []
     for window in windows:
-        x = (window[0] + dx[move[t][0]] * move[t][1]) % (N)
-        y = (window[1] + dy[move[t][0]] * move[t][1]) % (N)
+        print(window[0],window[1])
+        x = (window[0] + dx[move[t][0]] * move[t][1]) % N
+        y = (window[1] + dy[move[t][0]] * move[t][1]) % N
         temp.append([x,y])
-        print(window, x,y, move)
         graph[x][y] +=1
+        print(x,y)
     print(temp)
-    rain(temp)
+    # rain(temp)
     
     # lst_t = []
     # for i in range(N):
@@ -48,7 +49,7 @@ def moving(windows,t):
 
 
 
-moving([[N, 1], [N, 2], [N-1, 1], [N-1, 2]], 0)
+moving([[N-1, 0], [N-1, 1], [N-2, 0], [N-2, 1]], 0)
 
 
 print(graph)
