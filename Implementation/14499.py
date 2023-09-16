@@ -7,7 +7,7 @@ for i in range(N):
     graph.append(list(map(int,sys.stdin.readline().strip().split())))
 
 commands = list(map(int,sys.stdin.readline().strip().split()))
-print(graph)
+
 dx = [0,0,0,-1,1]
 dy = [0,1,-1,0,0]
 row = [0,0,0,0] #가로
