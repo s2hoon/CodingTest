@@ -1,1 +1,3 @@
-print(startswith("hi"))
+hi="hi"
+
+hi.startswith
