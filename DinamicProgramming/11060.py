@@ -17,3 +17,5 @@ if dp[-1] == 1e9:
     print(-1)
 else:
     print(dp[-1])
+
+
