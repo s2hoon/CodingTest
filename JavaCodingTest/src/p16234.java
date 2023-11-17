@@ -13,7 +13,7 @@ class Point{
 
 }
 
-public class Main {
+public class p16234 {
     
 
     static int N ;
