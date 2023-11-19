@@ -2,7 +2,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class p14888 {
     
     static int N;
     static int [] nums;
