@@ -37,6 +37,7 @@ public class p16197 {
         if (fall1 && fall2 ) return -1;
         if (fall1 || fall2 ) return answer;
     
+        int ans = -1;
 
         // 다음경우
         for (int i =0; i< 4 ;i++){
@@ -45,23 +46,31 @@ public class p16197 {
             int nx2 = p2.x + dx[i];
             int ny2 = p2.y + dy[i];
             
-            if (nx1 < N  && nx1 >= 0 && ny1 < M && ny1 >= 0 && graph[nx1][ny1]== "#"){
+            if (nx1 < N  && nx1 >= 0 && ny1 < M && ny1 >= 0 && graph[nx1][ny1].equals("#") ){
                 nx1 = p1.x;
                 ny1 = p1.y;
             }
        
-            if (nx2 < N  && nx2 >= 0 && ny2 < M && ny2 >= 0 && graph[nx2][ny2]== "#"){
+            if (nx2 < N  && nx2 >= 0 && ny2 < M && ny2 >= 0 && graph[nx2][ny2].equals("#") ){
                 nx2 = p2.x;
                 ny2 = p2.y;
             }
             Point np1 = new Point(nx1,ny1);
             Point np2 = new Point(nx2,ny2);
+            
+            int temp =recursive(np1, np2, answer+1);
+            if(temp == -1){
+                continue;
+            }
 
-            answer =recursive(np1, np2, answer+1);
+            if (ans == -1 || ans > temp){
+                ans = temp;
+            }
+            
 
         }
       
-        return answer;
+        return ans;
       
     }
 
@@ -83,7 +92,7 @@ public class p16197 {
                 }
             }
         }
-        System.out.println(coins);
+     
 
         Point p1 = new Point(coins.get(0).x, coins.get(0).y);
         Point p2 = new Point(coins.get(1).x, coins.get(1).y);
