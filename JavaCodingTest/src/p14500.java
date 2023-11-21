@@ -48,7 +48,7 @@ public class p14500 {
             if(nx >= N || nx <0 || ny >= M || ny<0 || pset.contains(new Point(nx,ny))){
                 continue;
             }
-            Point temp = new Point(nx,ny);
+      
             DFS(new Point(nx, ny), cnt-1, sum+graph[nx][ny]);
           
         }

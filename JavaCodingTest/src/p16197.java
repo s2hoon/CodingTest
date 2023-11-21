@@ -24,7 +24,7 @@ public class p16197 {
         }
         boolean fall1 = false;
         boolean fall2 = false;
-        // 종료 조건 ->  동전이 하나가 됬을 경우
+        // 내가 찾는 상황 -> 동전이 하나가 됬을 경우
         if (p1.x >= N ||p1.x <0 || p1.y >= M || p1.y < 0){
             fall1 = true;
         }
@@ -39,7 +39,7 @@ public class p16197 {
     
         int ans = -1;
 
-        // 다음경우
+   
         for (int i =0; i< 4 ;i++){
             int nx1 = p1.x + dx[i];
             int ny1 = p1.y + dy[i];

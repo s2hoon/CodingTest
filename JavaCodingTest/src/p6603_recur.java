@@ -22,13 +22,13 @@ public class p6603_recur {
 
         // 추가
         lotto.add(sets[index]);
-        // 내가 원하는 상황 검사
+        // 재귀 -> 검사하고 추가, 제거
         recursive(cnt-1, index+1);
         // 제거
         lotto.remove(lotto.size()-1);
 
         // 추가
-        // 내가 원하는 상황 검사
+        // 재귀
         recursive(cnt,index+1);
         // 제거
 
