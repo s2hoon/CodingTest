@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class p2580 {
     
     static int [][] graph;
     static List<int[]> points;

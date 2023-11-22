@@ -7,6 +7,7 @@ public class p16197 {
 
     static int [] dx = {0,1,0,-1};
     static int [] dy = {1,0,-1,0};
+    static List<Integer> results;
 
     static class Point{
         public int x;
@@ -18,27 +19,29 @@ public class p16197 {
     }
 
     public static int recursive(Point p1, Point p2 , int answer){
-        // 불가능 한 경우 -> answer == 11
+        // 불가능 한 경우 -> 11번째 시도
         if (answer == 11){
             return -1;
         }
         boolean fall1 = false;
         boolean fall2 = false;
-        // 내가 찾는 상황 -> 동전이 하나가 됬을 경우
+   
         if (p1.x >= N ||p1.x <0 || p1.y >= M || p1.y < 0){
             fall1 = true;
         }
        
-        // 불가능 한 경우 -> 둘다 떨어짐
+       
         if ( p2.x >= N ||p2.x <0 || p2.y >= M || p2.y < 0) {
             fall2 = true;
         }
-
+         // 불가능 한 경우 -> 둘다 떨어짐
         if (fall1 && fall2 ) return -1;
-        if (fall1 || fall2 ) return answer;
+        // 내가 찾는 상황 -> 동전이 하나가 됬을 경우
+        if (fall1 || fall2 ){
+            results.add(answer);
+            return answer;
+        }
     
-        int ans = -1;
-
    
         for (int i =0; i< 4 ;i++){
             int nx1 = p1.x + dx[i];
@@ -58,19 +61,12 @@ public class p16197 {
             Point np1 = new Point(nx1,ny1);
             Point np2 = new Point(nx2,ny2);
             
-            int temp =recursive(np1, np2, answer+1);
-            if(temp == -1){
-                continue;
-            }
-
-            if (ans == -1 || ans > temp){
-                ans = temp;
-            }
-            
+            recursive(np1, np2, answer+1);
+       
 
         }
       
-        return ans;
+        return answer;
       
     }
 
@@ -98,10 +94,10 @@ public class p16197 {
         Point p2 = new Point(coins.get(1).x, coins.get(1).y);
 
 
+        results = new ArrayList<>();
+        recursive(p1, p2 , 0);
 
-        int ans = recursive(p1, p2 , 0);
-
-        System.out.println(ans);
+        System.out.println(Collections.min(results));
 
 
 

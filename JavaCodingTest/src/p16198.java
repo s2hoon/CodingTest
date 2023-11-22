@@ -9,12 +9,15 @@ class p16198 {
 
 
     public static void recursive(int answer){
+
+        //내가 찾고싶은 조건 결과
         if (goosel.size() == 2){
             sums.add(answer);
 
         }
 
 
+        // 준비 , re , 되돌아오기
         for(int i =1 ; i< goosel.size()-1 ; i++){
             answer += goosel.get(i-1) * goosel.get(i+1);
             int temp =goosel.remove(i);

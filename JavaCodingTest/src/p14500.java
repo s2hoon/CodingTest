@@ -35,7 +35,7 @@ public class p14500 {
     static int[] dx = {0,1,0,-1};
     static int[] dy = {1,0,-1,0};
     static Set<Point> pset = new HashSet<>();
-    public static void DFS(Point p , int cnt, int sum){
+    public static void notDFs(Point p , int cnt, int sum){
 
         if(cnt == 0){
             answer = Math.max(sum, answer);
@@ -49,7 +49,7 @@ public class p14500 {
                 continue;
             }
       
-            DFS(new Point(nx, ny), cnt-1, sum+graph[nx][ny]);
+            notDFs(new Point(nx, ny), cnt-1, sum+graph[nx][ny]);
           
         }
          pset.remove(p);
@@ -133,7 +133,7 @@ public class p14500 {
 
         for(int i =0; i< N;i++){
             for(int j=0; j<M; j++){
-                DFS(new Point(i,j), 3, graph[i][j]);
+                notDFs(new Point(i,j), 3, graph[i][j]);
             }
         }
 
