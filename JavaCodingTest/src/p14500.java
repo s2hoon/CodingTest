@@ -4,118 +4,34 @@ import java.io.*;
 
 public class p14500 {
 
-
     static int N;
     static int M;
     static int [][] graph;
-    static class Point{
-        public int x;
-        public int y;
-        Point(int x, int y){
-            this.x = x;
-            this.y = y;
-        }
-        
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Point point = (Point) o;
-            return x == point.x &&
-                    y == point.y;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(x, y);
-        }
-    }
-   
     static int answer =0;
     static int[] dx = {0,1,0,-1};
     static int[] dy = {1,0,-1,0};
-    static Set<Point> pset = new HashSet<>();
-    public static void notDFs(Point p , int cnt, int sum){
+    static boolean[][] visited;
+    public static void recursive(int x, int y , int cnt, int sum){
 
         if(cnt == 0){
             answer = Math.max(sum, answer);
             return;
         }
-        pset.add(p);
+        
+        visited[x][y] =true;
         for(int i = 0 ; i< 4;i++){
-            int nx = p.x + dx[i];
-            int ny = p.y + dy[i];
-            if(nx >= N || nx <0 || ny >= M || ny<0 || pset.contains(new Point(nx,ny))){
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+            if(nx >= N || nx <0 || ny >= M || ny<0 || visited[nx][ny] != false){
                 continue;
             }
       
-            notDFs(new Point(nx, ny), cnt-1, sum+graph[nx][ny]);
+            recursive(nx,ny, cnt-1, sum+graph[nx][ny]);
           
         }
-         pset.remove(p);
-
+        visited[x][y] = false;
     }
 
-
-    public static void recursive(Point p ){
-        int temp =graph[p.x][p.y];
-         for(int i = 0 ; i< 4;i++){
-            int nx = p.x + dx[i];
-            int ny = p.y + dy[i];
-            if(nx >= N || nx <0 || ny >= M || ny<0 ){
-                continue;
-            }
-            if(nx ==p.x +1 && ny==p.y){
-                continue;
-            }
-            temp += graph[nx][ny];
-        }
-        answer = Math.max(answer, temp);
-        temp = graph[p.x][p.y];
-        for(int i = 0 ; i< 4;i++){
-            int nx = p.x + dx[i];
-            int ny = p.y + dy[i];
-            if(nx >= N || nx <0 || ny >= M || ny<0 ){
-                continue;
-            }
-            if(nx ==p.x -1 && ny==p.y){
-                continue;
-            }
-            temp += graph[nx][ny];
-        }
-        answer = Math.max(answer, temp);
-        temp = graph[p.x][p.y];
-        for(int i = 0 ; i< 4;i++){
-            int nx = p.x + dx[i];
-            int ny = p.y + dy[i];
-            if(nx >= N || nx <0 || ny >= M || ny<0 ){
-                continue;
-            }
-            if(nx ==p.x  && ny==p.y+1){
-                continue;
-            }
-            temp += graph[nx][ny];
-          
-        }
-        answer = Math.max(answer, temp);
-        temp = graph[p.x][p.y];
-        for(int i = 0 ; i< 4;i++){
-            int nx = p.x + dx[i];
-            int ny = p.y + dy[i];
-            if(nx >= N || nx <0 || ny >= M || ny<0 ){
-                continue;
-            }
-            if(nx ==p.x  && ny==p.y-1){
-                continue;
-            }
-            temp += graph[nx][ny];
-        
-        }
-        answer = Math.max(answer, temp);
-        temp = graph[p.x][p.y];
-        
- 
-    }
 
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -129,25 +45,37 @@ public class p14500 {
                 graph[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-
-
+        visited = new boolean[N][M];
         for(int i =0; i< N;i++){
             for(int j=0; j<M; j++){
-                notDFs(new Point(i,j), 3, graph[i][j]);
+                recursive(i,j, 3, graph[i][j]);
             }
         }
 
-          for(int i =0; i< N;i++){
-            for(int j=0; j<M; j++){
-                recursive(new Point(i,j));
+        for(int i =0 ; i< N ; i++){
+            for(int j =0; j< M ; j++){
+
+                if( j-1 >= 0 &&  i +1 < N && i-1 >= 0 ){
+                    answer = Math.max(answer, graph[i][j] + graph[i][j-1] + graph[i+1][j] + graph[i-1][j]);
+                }
+                if( j+1 < M &&  i +1 < N && i-1 >= 0 ){
+                    answer = Math.max(answer,graph[i][j] + graph[i][j+1] + graph[i+1][j] + graph[i-1][j]);
+                }
+                if( i-1 >= 0 && j+1 < M && j-1 >= 0){
+                    answer = Math.max(answer, graph[i][j] + graph[i][j+1] + graph[i][j-1] + graph[i-1][j]);
+                }
+                if( i+1 < N && j+1 < M && j-1 >= 0)
+                    answer = Math.max(answer, graph[i][j] + graph[i][j+1] + graph[i][j-1] + graph[i+1][j]);
+                }
+        
+               
             }
-        }
-       
-       
+
         System.out.println(answer);
 
-
-
-
     }
+
 }
+
+
+
