@@ -1,0 +1,147 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "building",
+            "request": "launch",
+            "mainClass": "building",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "apple",
+            "request": "launch",
+            "mainClass": "apple",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p11066",
+            "request": "launch",
+            "mainClass": "p11066",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p12865",
+            "request": "launch",
+            "mainClass": "p12865",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p12886",
+            "request": "launch",
+            "mainClass": "p12886",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p14500",
+            "request": "launch",
+            "mainClass": "p14500",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p14888",
+            "request": "launch",
+            "mainClass": "p14888",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p1496",
+            "request": "launch",
+            "mainClass": "p1496",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p15658",
+            "request": "launch",
+            "mainClass": "p15658",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p16197",
+            "request": "launch",
+            "mainClass": "p16197",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p16198",
+            "request": "launch",
+            "mainClass": "p16198",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p16234",
+            "request": "launch",
+            "mainClass": "p16234",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p16928",
+            "request": "launch",
+            "mainClass": "p16928",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p16929",
+            "request": "launch",
+            "mainClass": "p16929",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p16948",
+            "request": "launch",
+            "mainClass": "p16948",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p2580",
+            "request": "launch",
+            "mainClass": "p2580",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p2_12865",
+            "request": "launch",
+            "mainClass": "p2_12865",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p6603_recur",
+            "request": "launch",
+            "mainClass": "p6603_recur",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "p9663",
+            "request": "launch",
+            "mainClass": "p9663",
+            "projectName": "CodingTest_29af2a35"
+        }
+    ]
+}
