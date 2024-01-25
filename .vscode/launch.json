@@ -6,6 +6,83 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main15686",
+            "request": "launch",
+            "mainClass": "Main15686",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "mo",
+            "request": "launch",
+            "mainClass": "mo",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main2295",
+            "request": "launch",
+            "mainClass": "Main2295",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main11582",
+            "request": "launch",
+            "mainClass": "Main11582",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main2167",
+            "request": "launch",
+            "mainClass": "Main2167",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main7795",
+            "request": "launch",
+            "mainClass": "Main7795",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main1449",
+            "request": "launch",
+            "mainClass": "Main1449",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main1439",
+            "request": "launch",
+            "mainClass": "Main1439",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main10451",
+            "request": "launch",
+            "mainClass": "Main10451",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main17413",
+            "request": "launch",
+            "mainClass": "Main17413",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main16236",
+            "request": "launch",
+            "mainClass": "Main16236",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
             "name": "building",
             "request": "launch",
             "mainClass": "building",
