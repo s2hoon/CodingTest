@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main3197",
+            "request": "launch",
+            "mainClass": "Main3197",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main2252",
+            "request": "launch",
+            "mainClass": "Main2252",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "pinball",
+            "request": "launch",
+            "mainClass": "pinball",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main1952",
+            "request": "launch",
+            "mainClass": "Main1952",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main15683",
+            "request": "launch",
+            "mainClass": "Main15683",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "Main1245",
+            "request": "launch",
+            "mainClass": "Main1245",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
+            "name": "snail",
+            "request": "launch",
+            "mainClass": "snail",
+            "projectName": "CodingTest_29af2a35"
+        },
+        {
+            "type": "java",
             "name": "Main7568",
             "request": "launch",
             "mainClass": "Main7568",
