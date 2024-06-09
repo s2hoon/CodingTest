@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+public class Main2075 {
+
+
+
+
+    static PriorityQueue<Integer> pq = new PriorityQueue<>();
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        for(int i =0 ;i<N; i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            for(int j =0 ;j<N;j++){
+                pq.add(-Integer.parseInt(st.nextToken()));
+            }
+        }
+        int count = 0;
+        while(!pq.isEmpty()){
+            int t = pq.poll();
+            count +=1;
+            if(N==count){
+                System.out.println(-t);
+                break;
+            }
+        }
+    }
+}
