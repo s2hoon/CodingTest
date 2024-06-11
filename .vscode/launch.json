@@ -6,6 +6,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main2891",
+      "request": "launch",
+      "mainClass": "그리디.Main2891",
+      "projectName": "CodingTest_29af2a35"
+    },
+    {
+      "type": "java",
+      "name": "Main1802",
+      "request": "launch",
+      "mainClass": "그리디.Main1802",
+      "projectName": "CodingTest_29af2a35"
+    },
+    {
+      "type": "java",
+      "name": "Main17086",
+      "request": "launch",
+      "mainClass": "Main17086",
+      "projectName": "CodingTest_29af2a35"
+    },
+    {
+      "type": "java",
       "name": "Main1543",
       "request": "launch",
       "mainClass": "그리디.Main1543",
